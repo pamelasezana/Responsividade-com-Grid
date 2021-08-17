@@ -1,0 +1,56 @@
+.container{
+    display: grid;
+   gap:10px;
+ 
+ background-color: #ddd;
+ grid-template-areas: 
+
+  "header header header header "
+  "menu  conteudo conteudo conteudo "
+  "adv conteudo conteudo conteudo"
+  "rodape rodape rodape rodape"
+ ;
+
+}
+.item{
+    background-color: blue;
+    border-radius: 10px;
+    padding: 20px;
+    color:#fff;
+    font-size: 20px;
+}
+
+/* 1- grid-row-start
+    2 - grid-column-start
+    3- grid-row-end
+    4 - grid-column-end
+    */
+
+header{
+    grid-area:header;
+}
+nav{
+    grid-area: menu;
+}
+section{
+    grid-area: conteudo;
+}
+footer{
+    grid-area: rodape;
+}
+.adv{
+    grid-area:adv;
+}
+
+@media (max-width:750px){
+    .container{
+        grid-template-areas: 
+        "header header header menu"
+       
+        "conteudo conteudo conteudo conteudo"
+        "adv adv adv adv"
+       
+        "rodape rodape rodape rodape"
+        ;
+    }
+}
